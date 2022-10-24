@@ -11,9 +11,12 @@ This project was my first big GUI project, and I spent most of my time with it e
 
 For further information on the logistics of the project, please read below: 
 -------------
-#### First, to **create the canvas**:
 
-Piano keys obviously have a very specific and recognisable look, and I wanted to maintain that look for the best user experience. To do this, I used a digital image of piano keys, similar to [**this**](https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/PianoKeyboard.svg/161px-PianoKeyboard.svg.png?20061008130835), and measured the relative sizes of the height and width of the white and black keys. **The units used are irrelevant**, whether its pixels, inches, centimeters, or anything else, so long as the same unit is consistently used. With these measurements, I recorded **the ratios of the keys in relation to each other**, as well as some other useful numbers, as seen below. 
+### First, to **create the canvas**:
+
+Piano keys obviously have a very specific and recognisable look, and I wanted to maintain that look for the best user experience. To do this, I used a digital image of piano keys, similar to [**this**](https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/PianoKeyboard.svg/161px-PianoKeyboard.svg.png?20061008130835), and measured the relative sizes of the height and width of the white and black keys. 
+
+**The units used are irrelevant**, whether its pixels, inches, centimeters, or anything else, so long as the same unit is consistently used. With these measurements, I recorded **the ratios of the keys in relation to each other**, as well as some other useful numbers, as seen below. 
 
 ```java
     /*
@@ -25,3 +28,5 @@ Piano keys obviously have a very specific and recognisable look, and I wanted to
     */
 
 ```
+
+
