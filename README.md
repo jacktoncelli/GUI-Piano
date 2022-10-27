@@ -31,6 +31,25 @@ Piano keys obviously have a very specific and recognisable look, and I wanted to
 
 To actually draw the keys onto the canvas, I made a helper function, ***drawShapes()***. Instead of creating each key as a button, this method accepted the height and width of the canvas and used some light geometry to split it up according to the defined ratios of the keys. For white keys, I utilized the ***strokeLine*** method to draw their seperating lines. For black keys, I used the ***fillRect()*** method built into javafx canvas. 
 
+```java
+    private void drawShapes(GraphicsContext gc, int height, int width) {
+        /*
+        draws one octave of keys based on geometry
+        splits up the screen equally for each key, and uses the ratios defined above
+        --------------------------------------------
+        fillRect is used for black keys, and accepts two coordinates 
+        the first coordinate is the top left corner, and the second coordinate is the bottom right corner
+        
+        gc.fillRect(int x1, int y1, int x2, int y2)
+        --------------------------------------------
+        strokeLine is used for drawing the lines that seperate white keys
+        it accepts two coordinates for the start and end point of the line
+        
+        gc.strokeLine(int x1, int y1, int x2, int y2);
+        */
+    }
+
+```
 
 -------------
 
@@ -51,6 +70,8 @@ By making a visual display instead of a series of buttons, I had to create my ow
 
 When the mouse is clicked, an EventHandler calls getNote(), and passes the string into a seperate helper method, ***playThreadedNote()***, and this method will activate the correct thread within noteThreads. When the thread is activated, the computer on which the program is being run should play the note(if it has functioning speakers). 
 
-In order to stop playing the note, the thread must be turned off. A seperate EventHandler from the one used to activate the thread is called when the mouse is released. 
+In order to stop playing the note, the thread must be turned off. A seperate EventHandler from the one used to activate the thread is called when the mouse is released. The getNote() method is used to determine what key the cursor is over, and the thread within noteThreads is interrupted.
+
+------
 
 
