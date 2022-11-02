@@ -76,7 +76,14 @@ In order to stop playing the note, the thread must be turned off. A seperate Eve
 
 ### To play a song:
 
-I wanted to build in songs that would play at the press of a button, but there aren't any built in ways to do that other than to play each note of the song in succession. I ended up making the helper classes, Song and Note, which would act as the "sheet music" for the piano. 
+I wanted to build in songs that would play at the press of a button, but there aren't any built in ways to do that other than to play each note of the song in succession. I decided to make the helper classes, Song and Note, which would act as the "sheet music" for the piano. 
 
-The Note class has two attributes, a String representation of the note and a double for its duration. The duration is a decimal between 0 and 1. The decimal represents the percentage of a measure in 4/4 timing, so .25 is a quarter note, .5 is a half note, 1 is a whole note, etc. 
+The Note class has two attributes, a String representation of the note and a double for its duration. The duration is a decimal between 0 and 1, which represents the percentage of a measure in 4/4 timing, so .25 is a quarter note, .5 is a half note, 1 is a whole note, etc. 
+
+The Song class only has three attributes, a String name and an integer bpm (beats per minute). The bpm is used to convert the timing of notes into milliseconds. The most important class attribute, however, is the ArrayList of Notes, sheetMusic. sheetMusic contains all the notes and their respective durations. 
+
+In order to fill sheetMusic in a better way than simply apoending all the notes to the ArrayList manually, I made up a String representation of a Note object, which has three main components. First, a number to indicate the octave of the note, ranging from 0-7. Next is the string of the note itself, such as "C" or "D#". The final component is a decimal immediately after the note which represents its duration in a 4/4 measure. An example of a properly formatted String to convert to a Note is "6C.25", or "5A.5". 
+
+
+
 
