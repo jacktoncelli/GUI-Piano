@@ -74,4 +74,9 @@ In order to stop playing the note, the thread must be turned off. A seperate Eve
 
 ------
 
+### To play a song:
+
+I wanted to build in songs that would play at the press of a button, but there aren't any built in ways to do that other than to play each note of the song in succession. I ended up making the helper classes, Song and Note, which would act as the "sheet music" for the piano. 
+
+The Note class has two attributes, a String representation of the note and a double for its duration. The duration is a decimal between 0 and 1. The decimal represents the percentage of a measure in 4/4 timing, so .25 is a quarter note, .5 is a half note, 1 is a whole note, etc. 
 
