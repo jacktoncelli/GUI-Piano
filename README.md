@@ -84,6 +84,7 @@ The Song class only has three attributes, a String name and an integer bpm (beat
 
 In order to fill sheetMusic in a better way than simply apoending all the notes to the ArrayList manually, I made up a String representation of a Note object, which has three main components. First, a number to indicate the octave of the note, ranging from 0-7. Next is the string of the note itself, such as "C" or "D#". The final component is a decimal immediately after the note which represents its duration in a 4/4 measure. An example of a properly formatted String to convert to a Note is "6C.25", or "5A.5". 
 
+Input text was accepted in a method in the Song class, parseNotes(), which accepts either a String or a file. The text was processed as described above and the correctly formatted notes are added to sheetMusic, in order. Looking back, I could have made a constructor for the Note class that parses a string, but it works just as well within the Song class. 
 
 
 
